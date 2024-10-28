@@ -1,0 +1,19 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"line_numbers": false,
+	"rulers": [80],
+	"draw_centered": true,
+	"caret_style": "phase",
+	"caret_extra_top": 1,
+	"caret_extra_bottom": 1,
+	"show_tab_close_buttons": false,
+	"show_encoding": true,
+	"show_line_column": "compact",
+	"show_line_endings": true,
+	"remember_layout": true,
+	"font_size": 15,
+	"scroll_past_end": true,
+	"color_scheme": "Celeste.sublime-color-scheme",
+	"highlight_modified_tabs": true,
+}
