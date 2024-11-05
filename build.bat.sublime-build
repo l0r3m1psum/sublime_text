@@ -1,0 +1,5 @@
+{
+	"target": "my_example_build",
+	// "shell": true,	
+	// "file_regex": "^((?:\\w\\:)?[^\\:\\n]+\\.[A-Za-z]+)\\((\\d+)\\)\\ ?: (?:fatal )?(?:error|warning) \\w\\d+: ()([^\\n]+)$",
+}
