@@ -14,7 +14,7 @@
 	"remember_layout": true,
 	"font_size": 15,
 	"scroll_past_end": true,
-	"color_scheme": "Celeste.sublime-color-scheme",
+	"color_scheme": "acme.sublime-color-scheme",
 	"highlight_modified_tabs": true,
 	"draw_white_space": ["selection", "trailing"],
 	"trim_trailing_white_space_on_save": "all",
