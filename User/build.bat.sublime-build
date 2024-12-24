@@ -1,5 +1,11 @@
 {
-	"cmd": "build.bat",
-	"shell": true,	
-	// "file_regex": "^((?:\\w\\:)?[^\\:\\n]+\\.[A-Za-z]+)\\((\\d+)\\)\\ ?: (?:fatal )?(?:error|warning) \\w\\d+: ()([^\\n]+)$",
+	"windows": {
+		"cmd": "build.bat"
+		// "file_regex": "^((?:\\w\\:)?[^\\:\\n]+\\.[A-Za-z]+)\\((\\d+)\\)\\ ?: (?:fatal )?(?:error|warning) \\w\\d+: ()([^\\n]+)$",
+	},
+	"osx": {
+		"cmd": "build.sh"
+		// TODO: "file_regex": "..."
+	},
+	"shell": true
 }
