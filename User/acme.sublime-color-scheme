@@ -1,0 +1,22 @@
+{
+    "name": "Acme's Color Scheme",
+    "globals":
+    {
+        "background": "#FFFFEA",
+        "foreground": "#111",
+        "caret": "#111",
+        "selection": "#EEEE9E",
+        "highlight": "#025001",
+        "find_highlight": "#025001",
+        "find_highlight_foreground": "#FFF"
+        // celestino: "#8888CC"
+    },
+    "rules":
+    [
+        {
+            "name": "Comment",
+            "scope": "comment",
+            "foreground": "#888888"
+        }
+    ]
+}
