@@ -1,0 +1,10 @@
+{
+	"working_dir": "$folder", // The full path to the first folder listed in the side bar.
+	"interactive": true,
+	"windows": {
+		"cmd": "cmd.exe"
+	},
+	"osx": {
+		"cmd": "sh"
+	}
+}
