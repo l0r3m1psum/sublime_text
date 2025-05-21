@@ -1,4 +1,7 @@
 {
+	"shell": true,
+	"working_dir": "$folder", // The full path to the first folder listed in the side bar.
+	// "interactive": true,
 	"windows": {
 		"cmd": "build.bat"
 		// "file_regex": "^((?:\\w\\:)?[^\\:\\n]+\\.[A-Za-z]+)\\((\\d+)\\)\\ ?: (?:fatal )?(?:error|warning) \\w\\d+: ()([^\\n]+)$",
@@ -6,6 +9,5 @@
 	"osx": {
 		"cmd": "build.sh"
 		// TODO: "file_regex": "..."
-	},
-	"shell": true
+	}
 }
