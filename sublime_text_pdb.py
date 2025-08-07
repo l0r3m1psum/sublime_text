@@ -26,10 +26,16 @@ class SublimeTextPdb(pdb.Pdb):
 				self.subl_path,
 				("subl", "--background", file_and_lineno)
 			)
+			move_cmd = "move_to {\"to\": \"eol\", \"extend\": true}"
+			# https://discuss.python.org/t/how-to-deal-with-unsafe-broken-os-spawn-arg-handling-behavior-on-windows/20829
+			if os.name == "nt":
+				move_cmd = move_cmd.replace("\"", "\\\"")
+				move_cmd = "\"%s\"" % move_cmd
+			# FIXME: sometimes this randomly hangs on Windows.
 			exit_code_or_neg_signal = os.spawnv(
 				os.P_WAIT,
 				self.subl_path,
-				("subl", "--command", "move_to {\"to\": \"eol\", \"extend\": true}", "--background")
+				("subl", "--command", move_cmd, "--background")
 			)
 
 		super().user_line(frame)
@@ -41,11 +47,16 @@ def set_trace(*args, **kwargs):
 	else:
 		exts = ("",)
 
+	exts = [ext.lower() for ext in exts]
+
 	for path in paths:
 		try:
 			file_list = os.listdir(path)
 		except:
 			file_list = ()
+
+		if os.name == "nt":
+			file_list = [file.lower() for file in file_list]
 
 		for ext in exts:
 			subl_file_name = "subl" + ext
