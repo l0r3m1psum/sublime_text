@@ -48,7 +48,7 @@ def platform_get_from_path(cmd: str) -> str:
 	else:
 		res = ""
 
-	rerurn res
+	return res
 
 # Adapted from https://github.com/python/cpython/blob/bef9efabc3f899a8f05cc6bee009c7c5fb3d01ae/Lib/subprocess.py#L576
 # https://discuss.python.org/t/how-to-deal-with-unsafe-broken-os-spawn-arg-handling-behavior-on-windows/20829
@@ -106,7 +106,7 @@ class SublimeTextPdb(pdb.Pdb):
 				("subl", "--background", file_and_lineno)
 			)
 			exit_code_or_neg_signal = platform_spawn(
-				elf.subl_path,
+				self.subl_path,
 				("subl", "--command", "move_to {\"to\": \"eol\", \"extend\": true}", "--background")
 			)
 
