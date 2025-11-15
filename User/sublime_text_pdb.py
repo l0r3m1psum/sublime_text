@@ -113,7 +113,10 @@ class SublimeTextPdb(pdb.Pdb):
 		super().user_line(frame)
 
 # TODO: this file should be somewhere that Sublime Text does not try to load it
-# i.e. not in the User directory
+# i.e. not in the User directory.
+# TODO: using the Sublime Text executable to highlight the line seem to not work
+# when used from within Sublime Text. It is time to implement IPC to communicate
+# line information and highlight from the build command.
 def set_trace(*args, **kwargs):
 	subl_path = platform_get_from_path("subl")
 	if not subl_path:
