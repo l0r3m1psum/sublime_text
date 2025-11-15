@@ -112,8 +112,12 @@ class SublimeTextPdb(pdb.Pdb):
 
 		super().user_line(frame)
 
+# TODO: this file should be somewhere that Sublime Text does not try to load it
+# i.e. not in the User directory
 def set_trace(*args, **kwargs):
 	subl_path = platform_get_from_path("subl")
+	if not subl_path:
+		print("unable to find the path to the Sublime Text executable", file=sys.stderr)
 
 	sublime_text_debugger = SublimeTextPdb(*args, **kwargs)
 	sublime_text_debugger.subl_path = subl_path

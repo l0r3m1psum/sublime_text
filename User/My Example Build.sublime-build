@@ -1,0 +1,4 @@
+{
+	"target": "my_example_build",
+	"selector": "source.python",
+}
