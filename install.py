@@ -12,3 +12,4 @@ sublime_user_dir = os.path.expandvars(sublime_user_dir)
 
 shutil.copytree('User', sublime_user_dir, dirs_exist_ok=True)
 shutil.copy2('3rdparty/sublime-mlir-syntax/mlir.sublime-syntax', sublime_user_dir)
+shutil.copy2('3rdparty/LLVM-TableGen.tmBundle/Syntaxes/TableGen.tmLanguage', sublime_user_dir)

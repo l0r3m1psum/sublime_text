@@ -1,3 +1,6 @@
 [submodule "3rdparty/sublime-mlir-syntax"]
 	path = 3rdparty/sublime-mlir-syntax
 	url = https://github.com/rrbutani/sublime-mlir-syntax.git
+[submodule "3rdparty/LLVM-TableGen.tmBundle"]
+	path = 3rdparty/LLVM-TableGen.tmBundle
+	url = https://github.com/whitequark/LLVM-TableGen.tmBundle.git
